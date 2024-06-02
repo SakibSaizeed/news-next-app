@@ -6,6 +6,7 @@ import {
   List,
   ListItem,
   ListItemButton,
+  Box,
 } from "@mui/material";
 import Link from "next/link";
 
@@ -26,8 +27,8 @@ const CategoryList = async () => {
                 variant="outlined"
                 fullWidth
                 sx={{
-                  padding: "1rem",
-                  fontSize: "1.25rem",
+                  padding: "0.5rem",
+                  fontSize: { xs: "1rem", sm: "1.25rem" },
                   borderColor: "primary.main",
                   color: "primary.main",
                   "&:hover": {
@@ -38,8 +39,19 @@ const CategoryList = async () => {
               >
                 <Link
                   href={`/categories/news?category=${category.title.toLowerCase()}`}
+                  passHref
                 >
-                  {category.title}
+                  <Box
+                    component="a"
+                    sx={{
+                      textDecoration: "none",
+                      color: "inherit",
+                      width: "100%",
+                      textAlign: "center",
+                    }}
+                  >
+                    {category.title}
+                  </Box>
                 </Link>
               </Button>
             </ListItemButton>

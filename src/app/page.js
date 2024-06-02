@@ -4,7 +4,7 @@ import Sidebar from "@/components/ui/Sidebar";
 
 const HomePage = () => {
   return (
-    <Box className="bg-gradient-to-b from-gray-700 to-zinc-800 min-h-screen">
+    <Box className="bg-gradient-to-b from-gray-800 to-zinc-700 min-h-screen">
       {/* Header Section */}
       <Box className="text-white py-6">
         {" "}
